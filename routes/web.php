@@ -28,6 +28,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/categories/trashed', 'CategoriesController@trashed')->name('categories.trashed');
 
     Route::get('recipes/trashed', 'RecipesController@trashed')->name('recipes.trashed');
+
+    Route::get('/users', 'UsersDashboarController@users')->name('admin.allUsers');
+    Route::delete('/users/delete/{user}', 'UsersDashboarController@destroyUser')->name('admin.deleteUser');
 });
 
 Route::resource('recipes', 'RecipesController');
