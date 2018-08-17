@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/profile', 'UsersDashboarController@profile')->name('profile');
 });
 
+// Admin stuff
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', 'UsersDashboarController@dashboard')->name('admin.dashboard');
     Route::resource('categories', 'CategoriesController')->except('show');
@@ -31,6 +32,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/users', 'UsersDashboarController@users')->name('admin.allUsers');
     Route::delete('/users/delete/{user}', 'UsersDashboarController@destroyUser')->name('admin.deleteUser');
+
 });
 
 Route::resource('recipes', 'RecipesController');
