@@ -19,7 +19,7 @@
           {{--<img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">--}}
           <div class="card-img-top" style="height: 180px; width: 100%; background-color: rebeccapurple;"></div>
           <div class="card-body">
-            <p>category</p>
+            <p>categorysss</p>
             <p>Name</p>
           </div>
         </div>
